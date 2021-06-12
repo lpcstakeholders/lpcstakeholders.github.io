@@ -7,7 +7,7 @@
     <title>一鍵投訴</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        const queryString = window.location.search, urlParams = new URLSearchParams(queryString),token = urlParams.get("屋苑名稱")
+        const queryString = window.location.search, urlParams = new URLSearchParams(queryString),token = urlParams.get("house_estating")
         $.ajax("https://spreadsheets.google.com/feeds/list/15koystQhFPem8CVBbSbGD8mx81AR5a0x14i-OZu9QOs/osfhfp9/public/values?alt=json", {
             success: function(data) {
                 data = data.feed.entry

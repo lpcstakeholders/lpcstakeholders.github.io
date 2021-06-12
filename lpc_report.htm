@@ -12,9 +12,9 @@
             success: function(data) {
                 data = data.feed.entry
                 let house_estating = decodeURI(token) || '龍蟠苑'
-                $('h2#title').text(`《${house_estating}》 一鍵投訴`)
+                $('h2#title').text(`一鍵投訴`)
                 data.forEach(item =>{
-                    if(item.gsx$display['$t'] == "Y" && item.gsx$housingestating['$t'] == house_estating) {
+                    if(item.gsx$display['$t'] == "Y") {
                         $('#createTable').append(`<tr><td>${item.gsx$subject['$t']}</td><td><a href="mailto:${item.gsx$emailreceiver['$t']}?cc=${item.gsx$cc['$t']}&subject=${item.gsx$subject['$t']}&body=${encodeURIComponent(item.gsx$body['$t'])}">一鍵投訴</a></td></tr>`)
                     }
                 })

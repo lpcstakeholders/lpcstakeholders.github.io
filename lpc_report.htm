@@ -15,7 +15,7 @@
                 $('h2#title').text(`一鍵投訴`)
                 data.forEach(item =>{
                     if(item.gsx$display['$t'] == "Y") {
-                        $('#createTable').append(`<tr><td>${item.gsx$subject['$t']}</td><td style="text-align:center"><a href="mailto:${item.gsx$emailreceiver['$t']}?cc=${item.gsx$cc['$t']}&subject=${item.gsx$subject['$t']}&body=${encodeURIComponent(item.gsx$body['$t'])}">一鍵投訴</a></td></tr>`)
+                        $('#createTable').append(`<tr><td>${item.gsx$subject['$t']}</td><td width="100" style="text-align:center"><a href="mailto:${item.gsx$emailreceiver['$t']}?cc=${item.gsx$cc['$t']}&subject=${item.gsx$subject['$t']}&body=${encodeURIComponent(item.gsx$body['$t'])}">一鍵投訴</a></td></tr>`)
                     }
                 })
             }
